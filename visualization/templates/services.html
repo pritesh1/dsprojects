@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+	<link rel=stylesheet type=text/css href='{{ url_for('static',filename='jquery-ui.css')}}'>
+    <title>Financial Prediction: Pritesh Kanani</title>
+
+    <!-- Bootstrap core CSS -->
+    
+
+    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='bootstrap.css')}}'>
+	<link rel=stylesheet type=text/css href='{{ url_for('static',filename='font-awesome.min.css')}}'>
+
+    <!-- Custom styles for this template -->
+    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='main.css')}}'>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+   	
+  
+  
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">EC<i class="fa fa-circle"></i>N<i class="fa fa-circle"></i>SCI</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index">HOME</a></li>
+            <li><a href="about">ABOUT</a></li>
+            <li class="active"><a href="application">APPLICATION</a></li>
+            <li><a href="description">DESCRIPTION</a></li>
+            <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div id="blue">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h4>The Main Application  </b></h4>
+				<p>Please Review the Input Datasets</p>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- blue wrap -->
+
+	
+	<div class="container w">
+		<div class="row centered">
+			<br><br>
+			<div class="col-lg-14">
+				<i class=" fa fa-camera-retro fa-lg"></i>
+				<h4>Step 1 :Pick a date </h4>
+				<label for="from">From</label>
+				<input type="text" id="from" name="from">				
+				<label for="to">to</label>				
+				<input type="text" id="to" name="to">
+				<br>
+				
+			
+			</div><!-- col-lg-4 -->
+
+			<br>
+			<br>
+			<br>
+			<div class="col-lg-14">
+				<i class="fa fa-cog"></i>
+				<h4>Step 2 :Pick a choice for analysis </h4>
+				
+				<div id="format">
+  				<input type="checkbox" id="check1" ><label for="check1">Yahoo</label>
+  				<input type="checkbox" id="check2" ><label for="check2">Microsoft</label>
+  				<input type="checkbox" id="check3" ><label for="check3">Google</label>
+  				<input type="checkbox" id="check4" ><label for="check4">Apple</label>
+  				<input type="checkbox" id="check5" ><label for="check5">Facebook</label>
+				</div>
+ 
+				<br><br><br>
+				<i class="fa fa-camera-retro"></i>
+				<h4>Step 3 :Quick View : Look at the charts</h4>
+				<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				<br><br><br>
+			</div><!-- col-lg-4 -->
+
+
+			<div class="col-lg-14">
+				<i class=" fa fa-camera-retro fa-lg"></i>
+				<h4>Step 4 :Go For it </h4>
+				<form id='userinfoform_lulu' method='post' action='description' >
+     			 <p>
+    			<input type='submit' value='Submit' />
+      </p>
+    </form>
+				<br>
+				<br><br><br>
+			</div><!-- col-lg-4 -->
+
+
+
+		</div><!-- row -->
+	</div><!-- container -->
+
+
+	
+	
+	
+	<!-- FOOTER -->
+	<div id="f">
+		<div class="container">
+			<div class="row centered">
+				<a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
+		
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- Footer -->
+
+
+	<!-- MODAL FOR CONTACT -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">contact us</h4>
+	      </div>
+	      <div class="modal-body">
+		        <div class="row centered">
+		        	<p>We are available 24/7, so don't hesitate to contact us.</p>
+		        	<p>
+		        		Somestreet Ave, 987<br/>
+						London, UK.<br/>
+						+44 8948-4343<br/>
+						hi@blacktie.co
+		        	</p>
+		        	<div id="mapwrap">
+		<iframe height="300" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=52.752693,22.791016&amp;spn=67.34552,156.972656&amp;z=2&amp;output=embed"></iframe>
+					</div>	
+		        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Save & Go</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-ui.js') }}"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    
+    <script>
+    	$( "#menu" ).menu();
+
+
+	$( "#accordion" ).accordion();
+
+	var date1 = '01/01/2016'
+	var date2 = '01/02/2016'
+	var date3 = 0
+	var yahoo= false
+	var microsoft = false
+	var google = false
+	var apple = false
+	var facebook = false
+
+	function parseDate(str) {
+    var mdy = str.split('/')
+    return new Date(mdy[2], mdy[0]-1, mdy[1]);
+	}
+
+	$(function() {
+    	$( "#from" ).datepicker({
+     	 defaultDate: "+1w",
+     	 changeYear: true,
+     	 changeMonth: true,
+     	 numberOfMonths: 1,
+
+     	 onClose: function( selectedDate ) {
+       		 $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      	}
+   		});
+    	$( "#to" ).datepicker({
+   	   	defaultDate: "+1w",
+   	   	changeYear: true,
+   	   	changeMonth: true,
+      	numberOfMonths: 1,
+      	onClose: function( selectedDate ) {
+        	$( "#from" ).datepicker( "option", "maxDate", selectedDate );
+    	  	}
+    	});
+    	$("#from").on("change",function(){
+        date1 = $(this).val();
+    	});
+    	$("#to").on("change",function(){
+        date2 = $(this).val();
+        date3=(parseDate(date2)-parseDate(date1))/(1000*60*60*24);
+    	});
+
+ 		   	$( "#check" ).button();
+    	$( "#format" ).buttonset({
+    		disabled:true
+    	});
+    	$("#check1").on("change",function(){
+        yahoo=$(this).is(":checked")
+         if (yahoo==true){
+        var chart = $('#container').highcharts();
+        chart.series[0].show();
+    	}
+    	else {
+		var chart = $('#container').highcharts();
+        chart.series[0].hide();
+    	}
+    	});
+
+
+    	$("#check2").on("change",function(){
+        microsoft=$(this).is(":checked")
+        if (microsoft==true){
+    	var chart = $('#container').highcharts();
+        chart.series[1].show();
+    	}
+    	else {
+		var chart = $('#container').highcharts();
+        chart.series[1].hide();
+    	}
+    	});
+
+    	$("#check3").on("change",function(){
+        google=$(this).is(":checked")
+        if (google==true){
+    	var chart = $('#container').highcharts();
+        chart.series[2].show();
+    	}
+    	else {
+		var chart = $('#container').highcharts();
+        chart.series[2].hide();
+    	}
+    	});
+
+    	$("#check4").on("change",function(){
+        apple=$(this).is(":checked")
+        if (apple==true){
+    	var chart = $('#container').highcharts();
+        chart.series[3].show();
+    	}
+    	else {
+		var chart = $('#container').highcharts();
+        chart.series[3].hide();
+    	}
+    	});
+
+
+    	$("#check5").on("change",function(){
+        facebook=$(this).is(":checked")
+    	if (facebook==true){
+    	var chart = $('#container').highcharts();
+        chart.series[4].show();
+    	}
+    	else {
+		var chart = $('#container').highcharts();
+        chart.series[4].hide();
+    	}
+    	});
+ 
+
+
+
+
+
+
+
+
+    $('#container').highcharts({
+    	
+
+        title: {
+            text: 'Monthly Closing Prices',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: Yahoo Index',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Closing Prices'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+         credits: {
+            enabled: false
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Yahoo',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+            visible  : false
+        }, {
+            name: 'Microsoft',
+            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5],
+            visible: false
+        }, {
+            name: 'Google',
+            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0],
+            visible: false
+        }, {
+            name: 'Apple',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8],
+            visible: false
+            }, {
+            name: 'Facebook',
+            data: [3.7, 2.2, 7.7, 6.5, 15.9, 5.2, 7.0, 12.6, 11.2, 3.3, 1.6, 2.8],
+            visible: false
+        }]
+    });
+  
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+   
+
+
+    
+</script>
+
+
+  </body>
+</html>
